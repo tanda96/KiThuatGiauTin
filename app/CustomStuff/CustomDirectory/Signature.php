@@ -10,7 +10,7 @@ class Signature {
         $date = $datetime->format('Y-m-d-H-i-s');
         $wavFile = new WavFile;
         $tmp = $wavFile->ReadFile('../storage/app/audios/'.$filename.'_Download.wav');
-        $mess =  $username."-".$filename."-DoKhacPhong-".$date;
+        $mess =  $username."-".$filename."-TanDai-".$date;
         $signature = TexttoBin(str_pad(strlen($mess), 10, '0', STR_PAD_LEFT) . $mess);
         //Change bit
         $subchunk3data = unpack("H*", $tmp['subchunk3']['data']);
